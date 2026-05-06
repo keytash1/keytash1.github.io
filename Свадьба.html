@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+<title>Илья и Ирина · 26.09.26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant:wght@300;400;500&family=Parisienne&family=Allura&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7;
+  --paper:#f6f4f1;
+  --ink:#0e0e0e;
+  --ink-soft:#262626;
+  --muted:#8a8a8a;
+  --line:#e2dfd9;
+  --dark:#0a0a0a;
+  --script:'Parisienne','Allura','Pinyon Script',cursive;
+  --serif:'Cormorant Garamond',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+html,body{background:#0a0a0a;color:var(--ink);font-family:var(--serif);font-weight:300}
+body{display:flex;justify-content:center;min-height:100vh;overflow-x:hidden}
+.site{width:100%;max-width:480px;background:var(--bg);box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden;position:relative}
+section{position:relative;width:100%}
+.eb{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);font-weight:400;display:block}
+.eb.light{color:rgba(255,255,255,.75)}
+.script{font-family:var(--script);font-weight:400;color:var(--ink);line-height:.95;font-size:88px}
+.script.light{color:#fff}
+
+/* torn paper */
+.torn{position:absolute;left:0;right:0;height:32px;pointer-events:none;z-index:3;background-repeat:no-repeat;background-size:100% 100%}
+.torn.t-top{top:-1px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 32' preserveAspectRatio='none'><path d='M0 0 H480 V12 L460 14 L440 6 L420 14 L400 8 L380 18 L360 12 L340 22 L320 14 L300 24 L280 18 L260 28 L240 20 L220 30 L200 22 L180 32 L160 24 L140 30 L120 22 L100 28 L80 20 L60 26 L40 16 L20 24 L0 14 Z' fill='%23fbfaf7'/></svg>")}
+.torn.t-bot{bottom:-1px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 32' preserveAspectRatio='none'><path d='M0 32 H480 V20 L460 18 L440 26 L420 18 L400 24 L380 14 L360 20 L340 10 L320 18 L300 8 L280 14 L260 4 L240 12 L220 2 L200 10 L180 0 L160 8 L140 2 L120 10 L100 4 L80 12 L60 6 L40 16 L20 8 L0 18 Z' fill='%23fbfaf7'/></svg>")}
+.torn.dark.t-top{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 32' preserveAspectRatio='none'><path d='M0 0 H480 V12 L460 14 L440 6 L420 14 L400 8 L380 18 L360 12 L340 22 L320 14 L300 24 L280 18 L260 28 L240 20 L220 30 L200 22 L180 32 L160 24 L140 30 L120 22 L100 28 L80 20 L60 26 L40 16 L20 24 L0 14 Z' fill='%230a0a0a'/></svg>")}
+.torn.dark.t-bot{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 32' preserveAspectRatio='none'><path d='M0 32 H480 V20 L460 18 L440 26 L420 18 L400 24 L380 14 L360 20 L340 10 L320 18 L300 8 L280 14 L260 4 L240 12 L220 2 L200 10 L180 0 L160 8 L140 2 L120 10 L100 4 L80 12 L60 6 L40 16 L20 8 L0 18 Z' fill='%230a0a0a'/></svg>")}
+
+/* HERO */
+.hero{height:100svh;min-height:680px;background:#0a0a0a;color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.hero .ph{position:absolute;inset:0;background:url('assets/photo-ring.jpg') center 30%/cover no-repeat;filter:grayscale(100%) contrast(1.04) brightness(.88)}
+.hero .vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 50%,rgba(0,0,0,.85) 100%)}
+.hero .top{position:absolute;top:42px;left:0;right:0;text-align:center;z-index:2;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;color:rgba(255,255,255,.85);text-transform:uppercase}
+.hero .names{position:relative;text-align:center;padding:0 28px 110px;z-index:2}
+.hero .names h1{font-family:var(--script);font-weight:400;font-size:104px;line-height:.95;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.5);letter-spacing:.005em}
+.hero .names h1 .row{display:block}
+.hero .names h1 .amp{display:block;font-family:var(--script);font-size:72px;line-height:1;margin:-6px 0 -4px;opacity:.92}
+.hero .names .meta{margin-top:30px;display:flex;justify-content:center;align-items:center;gap:18px;font-family:'Cormorant',serif;letter-spacing:.45em;font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.hero .names .meta .dot{width:3px;height:3px;background:#fff;border-radius:50%}
+.scroll-hint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:'Cormorant',serif;font-size:9px;letter-spacing:.55em;color:rgba(255,255,255,.55);text-transform:uppercase;z-index:2}
+.scroll-hint::after{content:"";display:block;width:1px;height:30px;background:rgba(255,255,255,.45);margin:8px auto 0;animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.3}50%{transform:scaleY(1);opacity:.9}}
+
+/* generic light card */
+.sec{padding:96px 32px 110px;background:var(--bg);text-align:center;position:relative}
+.sec .eb{margin-bottom:16px}
+.sec .script{margin-bottom:8px}
+.sec p{margin-top:24px;font-size:19px;line-height:1.7;color:var(--ink-soft);font-weight:300;max-width:340px;margin-left:auto;margin-right:auto;text-wrap:pretty}
+.sec .sig{margin-top:46px;font-family:var(--script);font-size:54px;color:var(--ink);line-height:1}
+
+/* photo strip */
+.strip{height:54svh;min-height:380px;position:relative;overflow:hidden;background:#0a0a0a}
+.strip .ph{position:absolute;inset:0;background-size:cover;background-position:center 30%;filter:grayscale(100%) contrast(1.05) brightness(.95)}
+.strip.s-couple .ph{background-image:url('assets/photo-bouquet.jpg');background-position:center 55%;filter:grayscale(100%) contrast(1.06) brightness(.93)}
+.strip.s-walking .ph{background-image:url('assets/photo-walking.jpg')}
+.strip.s-stones .ph{background-image:url('assets/photo-stones.jpg')}
+.strip.s-waves .ph{background-image:url('assets/photo-waves.jpg')}
+.strip.s-sunset .ph{background-image:url('assets/photo-sunset.jpg');background-position:center 35%}
+.strip.s-ring .ph{background-image:url('assets/photo-ring.jpg')}
+.strip.s-bouquet .ph{background-image:url('assets/photo-bouquet.jpg');background-position:center 25%;filter:grayscale(15%) contrast(1.02) brightness(1)}
+.strip.s-proposal .ph{background-image:url('assets/photo-proposal.jpg');background-position:center 60%;filter:grayscale(20%) contrast(1.02)}
+.strip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,.55) 100%);pointer-events:none}
+.strip .quote{position:absolute;inset:auto 0 0 0;padding:0 32px 56px;text-align:center;z-index:2}
+.strip .quote .q{font-family:var(--script);font-size:84px;color:#fff;line-height:1;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+
+/* DATE */
+.bigdate{display:flex;flex-direction:column;align-items:center;line-height:.92;margin:6px auto 0;font-family:var(--serif);font-weight:300;color:var(--ink)}
+.bigdate .row{font-size:128px;letter-spacing:-.02em}
+.bigdate .row.m{font-style:italic}
+.dline{margin-top:22px;font-family:'Cormorant',serif;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink)}
+.cal{margin:36px auto 0;max-width:300px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.cal .month{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.45em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.cal table{width:100%;border-collapse:collapse}
+.cal th{font-family:'Cormorant',serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400;padding-bottom:8px}
+.cal td{font-family:var(--serif);font-size:16px;padding:6px 0;color:var(--ink-soft);text-align:center;position:relative}
+.cal td.dim{color:var(--line)}
+.cal td.special{color:var(--ink);font-weight:500;z-index:2}
+.cal td.special::before{content:"";position:absolute;inset:50% 50%;width:32px;height:30px;transform:translate(-50%,-50%);background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22' fill='none' stroke='%23a83232' stroke-width='1.6'><path d='M12 21s-9-6.2-9-12.5C3 4.5 6 2 9 2c1.7 0 3 .9 3 2.5C12 2.9 13.3 2 15 2c3 0 6 2.5 6 6.5C21 14.8 12 21 12 21z'/></svg>") center/contain no-repeat;z-index:-1}
+.countdown{margin-top:38px;display:flex;justify-content:center;gap:22px}
+.countdown .b{min-width:60px}
+.countdown .b .n{font-family:var(--serif);font-weight:300;font-size:42px;line-height:1;color:var(--ink)}
+.countdown .b .l{font-family:'Cormorant',serif;font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+/* LOCATION */
+.location .name{margin-top:14px;font-family:var(--serif);font-size:30px;color:var(--ink);font-weight:400;line-height:1.2}
+.location .addr{margin-top:6px;font-family:'Cormorant',serif;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted)}
+.location .map{margin:30px auto 0;width:100%;max-width:360px;height:240px;border:1px solid var(--line);overflow:hidden;background:#f0eee9}
+.location .map iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(.95)}
+.btn{display:inline-block;margin-top:24px;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:14px 28px;transition:all .25s ease;cursor:pointer;background:transparent}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:transparent;color:var(--ink)}
+
+/* TIMELINE */
+.tl{margin:42px auto 0;max-width:340px;position:relative}
+.tl::before{content:"";position:absolute;left:50%;top:14px;bottom:14px;width:1px;background:var(--line);transform:translateX(-50%)}
+.tl-item{display:grid;grid-template-columns:1fr 18px 1fr;column-gap:22px;align-items:center;padding:14px 0}
+.tl-item .time{font-family:var(--serif);font-size:30px;color:var(--ink);font-style:italic;font-weight:300;white-space:nowrap;line-height:1}
+.tl-item .desc{font-family:'Cormorant',serif;font-size:11px;color:var(--muted);line-height:1.5;letter-spacing:.28em;text-transform:uppercase}
+.tl-item .dot{width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 5px var(--bg),0 0 0 6px var(--line);justify-self:center;z-index:1}
+.tl-item:nth-child(odd) .time{grid-column:1;justify-self:end;text-align:right}
+.tl-item:nth-child(odd) .desc{grid-column:3;justify-self:start;text-align:left}
+.tl-item:nth-child(even) .desc{grid-column:1;justify-self:end;text-align:right}
+.tl-item:nth-child(even) .time{grid-column:3;justify-self:start;text-align:left}
+
+/* DRESS CODE — square swatches grouped by color family */
+.dress{padding:120px 32px 130px;background:#0a0a0a;color:#fff;text-align:center;position:relative}
+.dress .eb{margin-bottom:16px}
+.dress p{margin-top:22px;font-size:18px;line-height:1.7;color:rgba(255,255,255,.88);max-width:340px;margin-left:auto;margin-right:auto;font-weight:300;text-wrap:pretty}
+.dress p.lead{font-style:italic;color:#fff;font-size:19px}
+.groups{margin:48px auto 0;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:360px;justify-items:center}
+.group{display:flex;flex-direction:column;align-items:center;gap:12px}
+.glabel{font-family:'Cormorant',serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.85);text-align:center;line-height:1.3}
+.sq{width:42px;height:42px;border:1px solid rgba(255,255,255,.12);box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.g-1 .sq{background:#3f4a32}
+.g-2 .sq{background:#3b2a22}
+.g-3 .sq{background:#7a6754}
+.g-4 .sq{background:#cdb18e}
+.g-5 .sq{background:#e9d3c4}
+.g-6 .sq{background:#5a6680}
+
+/* DETAILS */
+.details-list{margin:42px auto 0;max-width:340px;display:flex;flex-direction:column;gap:34px;text-align:left}
+.detail{display:grid;grid-template-columns:34px 1fr;column-gap:14px;align-items:start}
+.detail .star{font-family:var(--script);font-size:54px;color:var(--ink);line-height:.5;padding-top:10px}
+.detail p{margin:0;font-family:var(--serif);font-size:17px;line-height:1.6;color:var(--ink-soft);font-weight:300;text-wrap:pretty}
+.detail p strong{font-style:italic;font-weight:500;color:var(--ink)}
+
+/* GUEST FORM */
+.guest{background:var(--paper)}
+.form{margin:36px auto 0;max-width:340px;display:flex;flex-direction:column;gap:20px;text-align:left}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-family:'Cormorant',serif;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);padding-left:2px}
+.field input{font-family:var(--serif);font-size:20px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);padding:8px 2px;outline:0;font-weight:300}
+.field input:focus{background:rgba(0,0,0,.02)}
+.field input::placeholder{color:#bcb8b0;font-style:italic}
+.choices{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.choice{display:flex;align-items:center;gap:12px;cursor:pointer}
+.choice input{display:none}
+.choice .cdot{width:14px;height:14px;border:1px solid var(--ink);border-radius:50%;flex:none;position:relative}
+.choice input:checked + .cdot::after{content:"";position:absolute;inset:3px;background:var(--ink);border-radius:50%}
+.choice .lbl{font-family:var(--serif);font-size:18px;color:var(--ink-soft);font-weight:300}
+.submit-btn{margin:14px auto 0;align-self:center;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:#fff;background:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:16px 32px;cursor:pointer;transition:all .25s}
+.submit-btn:hover{background:transparent;color:var(--ink)}
+.thanks{display:none;margin-top:30px;font-family:var(--script);font-size:60px;color:var(--ink);line-height:1;text-align:center}
+.form.sent .thanks{display:block}
+.form.sent .field, .form.sent .choices, .form.sent .submit-btn{display:none}
+
+/* CHATS */
+.chats-title{font-size:64px;white-space:nowrap}
+@media (max-width:380px){.chats-title{font-size:54px}}
+.chats .chat-row{margin-top:32px;display:flex;flex-direction:column;gap:14px;max-width:340px;margin-left:auto;margin-right:auto}
+.chat-card{display:flex;align-items:center;gap:16px;padding:18px 22px;border:1px solid var(--ink);background:transparent;text-decoration:none;color:var(--ink);transition:all .25s}
+.chat-card:hover{background:var(--ink);color:#fff}
+.chat-card:hover .ic{background:#fff;color:var(--ink)}
+.chat-card .ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.1em;font-weight:500;transition:all .25s}
+.chat-card .tx{text-align:left;flex:1}
+.chat-card .tx .t1{font-family:var(--serif);font-size:20px;line-height:1.1;font-weight:400}
+.chat-card .tx .t2{font-family:'Cormorant',serif;font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.chat-card:hover .tx .t2{color:rgba(255,255,255,.7)}
+.chat-card .arr{font-family:'Cormorant',serif;font-size:18px}
+
+/* FINAL */
+.final{position:relative;height:90svh;min-height:560px;background:#0a0a0a;color:#fff;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.final .bg{position:absolute;inset:0;background:url('assets/photo-walking.jpg') center 54%/cover no-repeat;filter:grayscale(100%) brightness(.55) contrast(1.1)}
+.final .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,.25) 50%,rgba(10,10,10,.85) 100%)}
+.final .inner{position:relative;padding:0 36px;z-index:2}
+.final .small{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.final h2{margin-top:18px;font-family:var(--script);font-weight:400;font-size:140px;line-height:.92;color:#fff}
+.final h2 .big{display:block}
+@media (max-width:380px){.final h2{font-size:112px}}
+.final .stamp{margin-top:32px;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;color:rgba(255,255,255,.85);text-transform:uppercase}
+.final .stamp .y{font-family:var(--serif);font-size:22px;letter-spacing:.2em;display:block;margin-top:10px;color:#fff}
+.final .heart{margin-top:30px;font-family:var(--script);font-size:68px;color:#fff;line-height:1}
+
+/* reveal animations */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.2,.65,.25,1),transform 1.1s cubic-bezier(.2,.65,.25,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-zoom{opacity:0;transform:scale(.94);transition:opacity 1.3s cubic-bezier(.2,.65,.25,1),transform 1.3s cubic-bezier(.2,.65,.25,1)}
+.reveal-zoom.in{opacity:1;transform:none}
+.reveal-script{opacity:0;transform:translateY(20px) scale(.96);transition:opacity 1.4s cubic-bezier(.2,.65,.25,1),transform 1.4s cubic-bezier(.2,.65,.25,1)}
+.reveal-script.in{opacity:1;transform:none}
+.stagger > *{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.stagger.in > *{opacity:1;transform:none}
+.stagger.in > *:nth-child(1){transition-delay:.05s}
+.stagger.in > *:nth-child(2){transition-delay:.16s}
+.stagger.in > *:nth-child(3){transition-delay:.27s}
+.stagger.in > *:nth-child(4){transition-delay:.38s}
+.stagger.in > *:nth-child(5){transition-delay:.49s}
+.stagger.in > *:nth-child(6){transition-delay:.60s}
+.kenburns{animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+
+@media (max-width:380px){
+  .hero .names h1{font-size:88px}
+  .hero .names h1 .amp{font-size:60px}
+  .script{font-size:74px}
+  .bigdate .row{font-size:104px}
+  .final h2{font-size:90px}
+  .final h2 .amp{font-size:56px}
+  .strip .quote .q{font-size:68px}
+}
+</style>
+</head>
+<body>
+
+<main class="site">
+
+  <section id="hero" class="hero">
+    <div class="ph kenburns"></div>
+    <div class="vignette"></div>
+    <div class="top">save the date</div>
+    <div class="names">
+      <h1 class="reveal-script">
+        <span class="row">Илья</span>
+        <span class="amp">&amp;</span>
+        <span class="row">Ирина</span>
+      </h1>
+      <div class="meta reveal"><span>26</span><span class="dot"></span><span>09</span><span class="dot"></span><span>26</span></div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </section>
+
+  <section class="sec invite">
+    <div class="torn t-top"></div>
+    <span class="eb reveal">— приглашение —</span>
+    <h2 class="script reveal-script">Дорогие<br>гости!</h2>
+    <p class="reveal">Приглашаем Вас разделить с нами день нашей свадьбы.</p>
+    <div class="sig reveal-script">Илья &amp; Ирина</div>
+  </section>
+
+  <section class="strip s-proposal">
+    <div class="torn dark t-top"></div>
+    <div class="ph kenburns"></div>
+    <div class="quote"><div class="q reveal-script">26.09.26</div></div>
+    <div class="torn dark t-bot"></div>
+  </section>
+
+  <section class="sec date">
+    <span class="eb reveal">— дата —</span>
+    <div class="script reveal-script">Дата</div>
+    <div class="bigdate reveal-zoom">
+      <div class="row">26</div>
+      <div class="row m">09</div>
+      <div class="row">26</div>
+    </div>
+    <div class="dline reveal">Суббота · 26 сентября 2026</div>
+    <div class="cal reveal">
+      <div class="month">Сентябрь · 2026</div>
+      <table>
+        <thead><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr></thead>
+        <tbody id="cal-body"></tbody>
+      </table>
+    </div>
+    <div class="countdown stagger">
+      <div class="b"><div class="n" id="cd-d">—</div><div class="l">дней</div></div>
+      <div class="b"><div class="n" id="cd-h">—</div><div class="l">часов</div></div>
+      <div class="b"><div class="n" id="cd-m">—</div><div class="l">минут</div></div>
+    </div>
+  </section>
+
+  <section class="strip s-stones">
+    <div class="torn dark t-top"></div>
+    <div class="ph kenburns"></div>
+    <div class="quote"><div class="q reveal-script">вместе</div></div>
+    <div class="torn dark t-bot"></div>
+  </section>
+
+  <section class="sec location">
+    <span class="eb reveal">— место —</span>
+    <div class="script reveal-script">Локация</div>
+    <div class="name reveal">Банкетный зал</div>
+    <div class="addr reveal">ул. Жужа, 37</div>
+    <div class="map reveal-zoom">
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.6173%2C55.7558&z=12&pt=37.6173,55.7558,pm2rdm" loading="lazy" title="Карта"></iframe>
+    </div>
+    <a class="btn dark reveal" href="https://yandex.ru/maps/org/banketny_zal/230886081607?si=tgc01dzt7dgp8r6enmhf59tt78" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a>
+  </section>
+
+  <section class="sec timeline">
+    <span class="eb reveal">— план дня —</span>
+    <div class="script reveal-script">План дня</div>
+    <div class="tl stagger">
+      <div class="tl-item"><div class="time">14:00</div><div class="dot"></div><div class="desc">сбор гостей</div></div>
+      <div class="tl-item"><div class="desc">начало<br>церемонии</div><div class="dot"></div><div class="time">15:00</div></div>
+      <div class="tl-item"><div class="time">16:00</div><div class="dot"></div><div class="desc">начало<br>банкета</div></div>
+      <div class="tl-item"><div class="desc">завершение<br>вечера</div><div class="dot"></div><div class="time">23:00</div></div>
+    </div>
+  </section>
+
+  <section class="strip s-bouquet">
+    <div class="torn dark t-top"></div>
+    <div class="ph kenburns"></div>
+    <div class="torn dark t-bot"></div>
+  </section>
+
+  <section class="dress">
+    <span class="eb light reveal">— дресс-код —</span>
+    <div class="script light reveal-script">Дресс-код</div>
+    <p class="lead reveal">Помните, что белый цвет — только для невесты)</p>
+    <p class="reveal">Для нас самое главное — ваше присутствие, но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков:</p>
+    <div class="groups stagger">
+      <div class="group g-1"><div class="sq"></div><div class="glabel">олива</div></div>
+      <div class="group g-2"><div class="sq"></div><div class="glabel">шоколад</div></div>
+      <div class="group g-3"><div class="sq"></div><div class="glabel">мокко</div></div>
+      <div class="group g-4"><div class="sq"></div><div class="glabel">песок</div></div>
+      <div class="group g-5"><div class="sq"></div><div class="glabel">пудра</div></div>
+      <div class="group g-6"><div class="sq"></div><div class="glabel">дымка</div></div>
+    </div>
+  </section>
+
+  <section class="sec details">
+    <span class="eb reveal">— детали —</span>
+    <div class="script reveal-script">Пожелания</div>
+    <div class="details-list stagger">
+      <div class="detail"><div class="star">✦</div><p>Мы знаем о традиции, что на свадьбах принято дарить цветы, но <strong>мы просим вас их не дарить</strong> — мы не успеем насладиться этой красотой! По желанию выразить любовь и радость можно в виде любого сертификата.</p></div>
+      <div class="detail"><div class="star">✦</div><p>В качестве подарка <strong>будем рады вкладу в бюджет нашей семьи.</strong></p></div>
+      <div class="detail"><div class="star">✦</div><p>К сожалению, в ресторане нет детских зон и возможности пригласить аниматоров — потому просим заранее подумать о том, с кем оставить ваших деток на праздничный вечер.</p></div>
+    </div>
+  </section>
+
+  <section class="strip s-waves">
+    <div class="torn dark t-top"></div>
+    <div class="ph kenburns"></div>
+    <div class="torn dark t-bot"></div>
+  </section>
+
+  <section class="sec guest">
+    <span class="eb reveal">— анкета гостя —</span>
+    <div class="script reveal-script">Анкета</div>
+    <p class="reveal">Чтобы мы могли подготовиться к встрече, заполните, пожалуйста, несколько коротких полей:</p>
+    <form class="form stagger" id="rsvp" onsubmit="event.preventDefault(); this.classList.add('sent')">
+      <div class="field"><label>фамилия и имя</label><input type="text" name="name" placeholder="за каждого гостя" required></div>
+      <div class="field"><label>номер телефона</label><input type="tel" name="phone" placeholder="+7 ___ ___ __ __" required></div>
+      <div class="field">
+        <label>планируете ли быть</label>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="rsvp" value="yes" required><span class="cdot"></span><span class="lbl">Да, с удовольствием!</span></label>
+          <label class="choice"><input type="radio" name="rsvp" value="no"><span class="cdot"></span><span class="lbl">К сожалению, не смогу</span></label>
+        </div>
+      </div>
+      <button class="submit-btn" type="submit">отправить</button>
+      <div class="thanks">Спасибо!<br>будем ждать вас</div>
+    </form>
+  </section>
+
+  <section class="sec chats">
+    <span class="eb reveal">— чаты гостей —</span>
+    <div class="script chats-title reveal-script">Будем на связи</div>
+    <p class="reveal">Чтобы не потеряться и быть в курсе всех деталей — присоединяйтесь к одному из чатов:</p>
+    <div class="chat-row stagger">
+      <a class="chat-card" href="https://t.me/+mLTwR2VHhq41YWVi" target="_blank" rel="noopener">
+        <div class="ic">TG</div>
+        <div class="tx"><div class="t1">Чат в Telegram</div><div class="t2">для гостей</div></div>
+        <div class="arr">→</div>
+      </a>
+      <a class="chat-card" href="https://max.ru/join/hf5u0ECglZ_PjSqCRh9lUFANy6wX1g2Z8dMTVhksAc0" target="_blank" rel="noopener">
+        <div class="ic">M</div>
+        <div class="tx"><div class="t1">Чат в МАХ</div><div class="t2">для гостей</div></div>
+        <div class="arr">→</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="bg kenburns"></div>
+    <div class="inner">
+      <div class="small reveal">— save the date —</div>
+      <h2 class="reveal-script"><span class="big">Будем<br>вас<br>ждать</span></h2>
+      <div class="stamp reveal"><span class="y">26 · 09 · 2026</span></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  const tbody = document.getElementById('cal-body');
+  if(!tbody) return;
+  const lead = 1, days = 30;
+  const trail = (7 - ((lead + days) % 7)) % 7;
+  const cells = lead + days + trail;
+  let html = '';
+  for(let i=0;i<cells;i+=7){
+    html += '<tr>';
+    for(let j=0;j<7;j++){
+      const idx = i+j;
+      const day = idx - lead + 1;
+      if(day < 1 || day > days) html += '<td class="dim">·</td>';
+      else if(day === 26) html += '<td class="special">'+day+'</td>';
+      else html += '<td>'+day+'</td>';
+    }
+    html += '</tr>';
+  }
+  tbody.innerHTML = html;
+})();
+
+(function(){
+  const target = new Date('2026-09-26T14:00:00+03:00').getTime();
+  const dEl=document.getElementById('cd-d'), hEl=document.getElementById('cd-h'), mEl=document.getElementById('cd-m');
+  function tick(){
+    const diff = target - Date.now();
+    if(diff <= 0){ dEl.textContent='0'; hEl.textContent='0'; mEl.textContent='0'; return; }
+    dEl.textContent = Math.floor(diff/86400000);
+    hEl.textContent = Math.floor(diff%86400000/3600000);
+    mEl.textContent = Math.floor(diff%3600000/60000);
+  }
+  tick(); setInterval(tick, 30000);
+})();
+
+(function(){
+  const sel = '.reveal, .reveal-zoom, .reveal-script, .stagger';
+  const els = document.querySelectorAll(sel);
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
+
+</body>
+</html>
