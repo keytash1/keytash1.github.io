@@ -71,6 +71,10 @@ section{position:relative;width:100%}
 .sec p{margin-top:24px;font-size:19px;line-height:1.7;color:var(--ink-soft);font-weight:300;max-width:340px;margin-left:auto;margin-right:auto;text-wrap:pretty}
 .sec .sig{margin-top:72px;font-family:var(--script-heading);font-size:54px;color:var(--ink);line-height:1}
 
+
+/* natural photo — original aspect ratio */
+.photo-natural{width:100%;background:var(--bg)}
+.natural-photo{width:100%;height:auto;display:block;filter:grayscale(15%) contrast(1.02)}
 /* photo strip */
 .strip{height:54svh;min-height:380px;position:relative;overflow:hidden;background:#0a0a0a}
 .strip .ph{position:absolute;inset:0;background-size:cover;background-position:center 30%;filter:grayscale(100%) contrast(1.05) brightness(.95)}
@@ -273,9 +277,9 @@ section{position:relative;width:100%}
     <p class="reveal">Приглашаем Вас разделить с нами день нашей свадьбы.</p>
     <div class="sig reveal-script">Илья &amp; Ирина</div>
   </section>
-  <section class="strip s-bouquet">
-    <div class="ph kenburns"></div>
-    </section>
+  <section class="photo-natural">
+    <img src="assets/photo-bouquet.jpg" alt="букет" class="natural-photo">
+  </section>
 
   <section class="sec date">
     <div class="script reveal-script">Дата</div>
