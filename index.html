@@ -99,9 +99,9 @@ section{position:relative;width:100%}
 .cal .month{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.45em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .cal table{width:100%;border-collapse:collapse}
 .cal th{font-family:'Cormorant',serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400;padding-bottom:8px}
-.cal td{font-family:var(--serif);font-size:16px;padding:6px 0;color:var(--ink-soft);text-align:center;position:relative}
+.cal td{font-family:system-ui,sans-serif;font-size:13px;padding:6px 0;color:var(--muted);text-align:center;position:relative;font-weight:300}
 .cal td.dim{color:var(--line)}
-.cal td.special{color:var(--ink);font-weight:500;z-index:2}
+.cal td.special{color:var(--ink);font-weight:600;font-size:17px;font-family:var(--serif);z-index:2}
 .cal td.special::before{content:"";position:absolute;inset:50% 50%;width:32px;height:30px;transform:translate(-50%,-50%);background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22' fill='none' stroke='%23a83232' stroke-width='1.6'><path d='M12 21s-9-6.2-9-12.5C3 4.5 6 2 9 2c1.7 0 3 .9 3 2.5C12 2.9 13.3 2 15 2c3 0 6 2.5 6 6.5C21 14.8 12 21 12 21z'/></svg>") center/contain no-repeat;z-index:-1}
 .countdown{margin-top:38px;display:flex;justify-content:center;gap:22px}
 .countdown .b{min-width:60px}
@@ -195,7 +195,7 @@ section{position:relative;width:100%}
 .final .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,.25) 50%,rgba(10,10,10,.85) 100%)}
 .final .inner{position:relative;padding:0 36px;z-index:2;width:100%;height:100%}
 .final .small{position:absolute;top:48px;left:0;right:0;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.85);text-align:center}
-.final h2{position:absolute;top:24%;left:0;right:0;margin-top:0;font-family:var(--script);font-weight:400;font-size:108px;line-height:1.35;color:#fff;text-align:center}
+.final h2{position:absolute;top:8%;left:0;right:0;margin-top:0;font-family:var(--script);font-weight:400;font-size:108px;line-height:1.35;color:#fff;text-align:center}
 .final h2 .big{display:block}
 @media (max-width:380px){.final h2{font-size:112px}}
 .final .stamp{position:absolute;bottom:54px;left:0;right:0;text-align:center;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;color:rgba(255,255,255,.85);text-transform:uppercase}
