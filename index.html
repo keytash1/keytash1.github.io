@@ -57,7 +57,7 @@ section{position:relative;width:100%}
 .hero .names h1 .row .cap{font-size:1.45em;line-height:.7;display:inline-block;margin-right:-.02em;vertical-align:-.06em}
 .hero .names h1 .amp{display:block;font-family:var(--script);font-size:58px;line-height:1;margin:-22px 0 -2px;opacity:.92;text-align:center;transform:translateX(14%)}
 .hero .bigdate-h{position:absolute;left:0;right:0;bottom:48px;text-align:center;z-index:2;font-family:var(--script);font-size:92px;line-height:1;color:#fff;letter-spacing:.02em;text-shadow:0 2px 24px rgba(0,0,0,.5)}
-@media (max-width:380px){.hero .names h1{font-size:104px}.hero .names h1 .amp{font-size:54px}.hero .bigdate-h{font-size:88px;bottom:56px}}
+
 .hero .names .meta{margin-top:30px;display:flex;justify-content:center;align-items:center;gap:18px;font-family:'Cormorant',serif;letter-spacing:.45em;font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.85)}
 .hero .names .meta .dot{width:3px;height:3px;background:#fff;border-radius:50%}
 .scroll-hint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:'Cormorant',serif;font-size:9px;letter-spacing:.55em;color:rgba(255,255,255,.55);text-transform:uppercase;z-index:2}
@@ -125,10 +125,8 @@ section{position:relative;width:100%}
 .tl-item .time{font-family:var(--serif);font-size:62px;color:var(--ink);font-style:normal;font-weight:300;white-space:nowrap;line-height:1}
 .tl-item .desc{font-family:'Cormorant',serif;font-size:18px;font-weight:500;color:var(--muted);line-height:1.5;letter-spacing:.22em;text-transform:uppercase}
 .tl-item .dot{width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 5px var(--bg),0 0 0 6px var(--line);justify-self:center;z-index:1}
-.tl-item:nth-child(odd) .time{grid-column:1;justify-self:end;text-align:right}
-.tl-item:nth-child(odd) .desc{grid-column:3;justify-self:start;text-align:left}
-.tl-item:nth-child(even) .time{grid-column:1;justify-self:end;text-align:right}
-.tl-item:nth-child(even) .desc{grid-column:3;justify-self:start;text-align:left}
+.tl-item .time{grid-column:1;justify-self:end;text-align:right}
+.tl-item .desc{grid-column:3;justify-self:start;text-align:left}
 
 /* DRESS CODE — square swatches grouped by color family */
 .dress{padding:38px 32px 130px;background:var(--bg);color:var(--ink);text-align:center;position:relative}
@@ -245,7 +243,7 @@ section{position:relative;width:100%}
   .script{font-size:50px}
   .hero .names h1{font-size:76px}
   .hero .names h1 .amp{font-size:42px}
-  .hero .bigdate-h{font-size:64px}
+  .hero .bigdate-h{font-size:64px;bottom:56px}
   .final h2{font-size:78px}
 }
 </style>
