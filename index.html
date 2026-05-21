@@ -34,7 +34,7 @@ body{display:flex;justify-content:center;min-height:100vh;overflow-x:hidden}
 section{position:relative;width:100%}
 .eb{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);font-weight:400;display:block}
 .eb.light{color:rgba(255,255,255,.75)}
-.script{font-family:var(--script-heading);font-style:normal;font-weight:400;color:var(--ink);line-height:1.05;font-size:88px;letter-spacing:0}
+.script{font-family:var(--script-heading);font-style:normal;font-weight:400;color:var(--ink);line-height:1.05;font-size:clamp(44px,12vw,88px);letter-spacing:0;white-space:nowrap}
 .script.light{color:#fff}
 
 /* torn paper */
@@ -231,7 +231,7 @@ section{position:relative;width:100%}
 @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.08)}}
 
 @media (max-width:480px){
-  .script{font-size:72px;overflow:visible;padding-right:16px}
+  .script{overflow:visible;padding-right:16px}
   .hero .names h1{font-size:88px}
   .hero .names h1 .amp{font-size:48px}
   .hero .names{top:28%}
@@ -241,7 +241,7 @@ section{position:relative;width:100%}
   .bigdate .row{font-size:104px}
 }
 @media (max-width:380px){
-  .script{font-size:62px}
+  
   .hero .names h1{font-size:76px}
   .hero .names h1 .amp{font-size:42px}
   .hero .bigdate-h{font-size:64px;bottom:56px}
