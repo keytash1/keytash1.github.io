@@ -34,7 +34,7 @@ body{display:flex;justify-content:center;min-height:100vh;overflow-x:hidden}
 section{position:relative;width:100%}
 .eb{font-family:'Cormorant',serif;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);font-weight:400;display:block}
 .eb.light{color:rgba(255,255,255,.75)}
-.script{font-family:var(--script-heading);font-style:normal;font-weight:400;color:var(--ink);line-height:1.05;font-size:88px;letter-spacing:0}
+.script{font-family:var(--script-heading);font-style:normal;font-weight:400;color:var(--ink);line-height:1.05;font-size:88px;letter-spacing:0;font-feature-settings:"ss02" 1}
 .script.light{color:#fff}
 
 /* torn paper */
@@ -272,7 +272,7 @@ section{position:relative;width:100%}
 
   <section class="sec invite">
     <span class="eb reveal">— приглашение —</span>
-    <h2 class="script reveal-script">Дорогие<br>гости!</h2>
+    <h2 class="script reveal-script" lang="sr">Дорогие<br>гости!</h2>
     <p class="reveal">Приглашаем Вас разделить с нами день нашей свадьбы.</p>
     <div class="sig reveal-script">Илья &amp; Ирина</div>
   </section>
@@ -281,7 +281,7 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec date">
-    <div class="script reveal-script">Дата</div>
+    <div class="script reveal-script" lang="sr">Дата</div>
     <div class="bigdate reveal-zoom">
       <div class="row">26</div>
       <div class="row">09</div>
@@ -302,7 +302,7 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec location">
-    <div class="script reveal-script">Локация</div>
+    <div class="script reveal-script" lang="sr">Локация</div>
     <div class="name reveal">Банкетный зал</div>
     <div class="addr reveal">ул. Жужа, 37</div>
     <div class="map reveal-zoom">
@@ -312,7 +312,7 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec timeline">
-    <div class="script reveal-script">Программа</div>
+    <div class="script reveal-script" lang="sr">Программа</div>
     <div class="tl stagger">
       <div class="tl-item"><div class="time">14:00</div><div class="dot"></div><div class="desc">сбор гостей</div></div>
       <div class="tl-item"><div class="time">15:00</div><div class="dot"></div><div class="desc">начало<br>церемонии</div></div>
@@ -321,7 +321,7 @@ section{position:relative;width:100%}
     </div>
   </section>
   <section class="dress">
-    <div class="script reveal-script">Дресс-код</div>
+    <div class="script reveal-script" lang="sr">Дресс-код</div>
     <p class="lead reveal">Помните, что белый цвет — только для невесты)</p>
     <p class="reveal">Для нас самое главное — ваше присутствие, но мы будем очень признательны, если вы поддержите цветовую гамму спокойных природных оттенков:</p>
     <div class="groups stagger">
@@ -337,11 +337,11 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec details">
-    <div class="script reveal-script">Пожелания</div>
+    <div class="script reveal-script" lang="sr">Пожелания</div>
     <div class="details-list stagger">
-      <div class="detail"><div class="star">✦</div><p>Мы знаем о традиции, что на свадьбах принято дарить цветы, но <strong>мы просим вас их не дарить</strong> — мы не успеем насладиться этой красотой! По желанию выразить любовь и радость можно в виде любого сертификата.</p></div>
-      <div class="detail"><div class="star">✦</div><p>В качестве подарка <strong>будем рады вкладу в бюджет нашей семьи.</strong></p></div>
-      <div class="detail"><div class="star">✦</div><p>К сожалению, в ресторане нет детских зон и возможности пригласить аниматоров — потому просим заранее подумать о том, с кем оставить ваших деток на праздничный вечер.</p></div>
+      <div class="detail"><p>Мы знаем о традиции, что на свадьбах принято дарить цветы, но <strong>мы просим вас их не дарить</strong> — мы не успеем насладиться этой красотой! По желанию выразить любовь и радость можно в виде любого сертификата.</p></div>
+      <div class="detail"><p>В качестве подарка <strong>будем рады вкладу в бюджет нашей семьи.</strong></p></div>
+      <div class="detail"><p>К сожалению, в ресторане нет детских зон и возможности пригласить аниматоров — потому просим заранее подумать о том, с кем оставить ваших деток на праздничный вечер.</p></div>
     </div>
   </section>
 
@@ -350,7 +350,7 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec guest">
-    <div class="script reveal-script">Анкета</div>
+    <div class="script reveal-script" lang="sr">Анкета</div>
     <p class="reveal">Чтобы мы могли подготовиться к встрече, заполните, пожалуйста, несколько коротких полей:</p>
     <form class="form stagger" id="rsvp" onsubmit="event.preventDefault(); this.classList.add('sent')">
       <div class="field"><label>фамилия и имя</label><input type="text" name="name" placeholder="за каждого гостя" required></div>
@@ -368,7 +368,7 @@ section{position:relative;width:100%}
   </section>
 
   <section class="sec chats">
-    <div class="script chats-title reveal-script">Будем на связи</div>
+    <div class="script chats-title reveal-script" lang="sr">Будем на связи</div>
     <p class="reveal">Чтобы не потеряться и быть в курсе всех деталей — присоединяйтесь к одному из чатов:</p>
     <div class="chat-row stagger">
       <a class="chat-card" href="https://t.me/+mLTwR2VHhq41YWVi" target="_blank" rel="noopener">
