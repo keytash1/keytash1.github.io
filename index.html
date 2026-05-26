@@ -351,7 +351,7 @@ section{position:relative;width:100%}
   <section class="sec guest">
     <div class="script reveal-script">Анкета</div>
     <p class="reveal">Чтобы мы могли подготовиться к встрече, заполните, пожалуйста, несколько коротких полей:</p>
-    <form class="form stagger" id="rsvp" onsubmit="event.preventDefault();var v=this.querySelector('input[name=rsvp]:checked');if(!v)return;var t=this.querySelector('.thanks');t.innerHTML=v.value==='yes'?'Спасибо!<br>будем ждать вас':'Спасибо,<br>что сообщили!';this.classList.add('sent')">
+    <form class="form stagger" id="rsvp" onsubmit="event.preventDefault();var v=this.querySelector('input[name=rsvp]:checked');if(!v)return;var t=this.querySelector('.thanks');t.innerHTML=v.value==='yes'?'Спасибо!<br>Скоро увидимся':'Спасибо,<br>что сообщили!';this.classList.add('sent')">
       <div class="field"><label>фамилия и имя</label><input type="text" name="name" placeholder="за каждого гостя" required></div>
       <div class="field"><label>номер телефона</label><input type="tel" name="phone" placeholder="+7 ___ ___ __ __" required></div>
       <div class="field">
@@ -362,7 +362,7 @@ section{position:relative;width:100%}
         </div>
       </div>
       <button class="submit-btn" type="submit">отправить</button>
-      <div class="thanks">Спасибо!<br>будем ждать вас</div>
+      <div class="thanks">Спасибо!<br>Скоро увидимся</div>
     </form>
   </section>
 
