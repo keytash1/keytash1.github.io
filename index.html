@@ -49,7 +49,7 @@ section{position:relative;width:100%}
 .hero .ph{position:absolute;inset:0;background:url('assets/photo-ring.jpg') center 30%/cover no-repeat;filter:grayscale(100%) contrast(1.04) brightness(.88)}
 .hero .vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 50%,rgba(0,0,0,.85) 100%)}
 .hero .top{position:absolute;top:42px;left:0;right:0;text-align:center;z-index:2;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.55em;color:rgba(255,255,255,.85);text-transform:uppercase}
-.hero .names{position:absolute;left:0;right:0;top:13%;text-align:center;padding:0 12px;z-index:2}
+.hero .names{position:absolute;left:0;right:0;top:17%;text-align:center;padding:0 12px;z-index:2}
 .hero .names h1{font-family:var(--script-heading);font-weight:400;font-size:116px;line-height:.9;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.45);letter-spacing:.005em}
 .hero .names h1 .row{display:block}
 .hero .names h1 .row.r1{text-align:center;transform:translateX(-2%)}
@@ -58,6 +58,8 @@ section{position:relative;width:100%}
 .hero .names h1 .amp{display:block;font-family:var(--script-heading);font-size:58px;line-height:1;margin:-22px 0 -2px;opacity:.92;text-align:center;transform:translateX(14%)}
 .hero .bigdate-h{position:absolute;left:0;right:0;bottom:48px;text-align:center;z-index:2;font-family:var(--script);font-size:92px;line-height:1;color:#fff;letter-spacing:.02em;text-shadow:0 2px 24px rgba(0,0,0,.5)}
 
+.names-img{display:block;margin:0 auto;width:auto;height:auto;max-width:82vw;max-height:48vh}
+@media(min-width:769px){.names-img{max-width:660px;max-height:54vh}}
 .hero .names .meta{margin-top:30px;display:flex;justify-content:center;align-items:center;gap:18px;font-family:'Cormorant',serif;letter-spacing:.45em;font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.85)}
 .hero .names .meta .dot{width:3px;height:3px;background:#fff;border-radius:50%}
 .scroll-hint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:'Cormorant',serif;font-size:9px;letter-spacing:.55em;color:rgba(255,255,255,.55);text-transform:uppercase;z-index:2}
@@ -258,7 +260,7 @@ section{position:relative;width:100%}
     <div class="vignette"></div>
     <div class="names">
       <h1 class="reveal-script">
-        <img src="assets/names-calligraphy.png" alt="Илья &amp; Ирина" style="display:block;margin:0 auto;max-width:min(500px,82vw);max-height:48vh;width:auto;height:auto">
+        <img src="assets/names-calligraphy.png" alt="Илья &amp; Ирина" class="names-img">
       </h1>
       <div class="meta reveal" style="display:none"><span>26</span><span class="dot"></span><span>09</span><span class="dot"></span><span>26</span></div>
     </div>
