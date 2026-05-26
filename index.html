@@ -172,7 +172,7 @@ section{position:relative;width:100%}
 .choice .lbl{font-family:var(--serif);font-size:18px;color:var(--ink-soft);font-weight:300}
 .submit-btn{margin:14px auto 0;align-self:center;font-family:'Cormorant',serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:#fff;background:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:16px 32px;cursor:pointer;transition:all .25s}
 .submit-btn:hover{background:transparent;color:var(--ink)}
-.thanks{display:none;margin-top:30px;font-family:var(--serif);font-size:22px;font-weight:300;color:var(--ink);line-height:1.7;text-align:center;letter-spacing:.02em}
+.thanks{display:none;margin-top:30px;font-family:var(--serif);font-size:clamp(16px,5.5vw,26px);font-weight:300;color:var(--ink-soft);line-height:1.7;text-align:center;max-width:340px;margin-left:auto;margin-right:auto}
 .form.sent .thanks{display:block}
 .form.sent .field, .form.sent .choices, .form.sent .submit-btn{display:none}
 
@@ -351,7 +351,7 @@ section{position:relative;width:100%}
   <section class="sec guest">
     <div class="script reveal-script">Анкета</div>
     <p class="reveal">Чтобы мы могли подготовиться к встрече, заполните, пожалуйста, несколько коротких полей:</p>
-    <form class="form stagger" id="rsvp" onsubmit="event.preventDefault();var v=this.querySelector('input[name=rsvp]:checked');if(!v)return;var t=this.querySelector('.thanks');t.innerHTML=v.value==='yes'?'Спасибо!<br>буgем жgать вас':'Спасибо,<br>что сообщили!';this.classList.add('sent')">
+    <form class="form stagger" id="rsvp" onsubmit="event.preventDefault();var v=this.querySelector('input[name=rsvp]:checked');if(!v)return;var t=this.querySelector('.thanks');t.innerHTML=v.value==='yes'?'Спасибо!<br>будем ждать вас':'Спасибо,<br>что сообщили!';this.classList.add('sent')">
       <div class="field"><label>фамилия и имя</label><input type="text" name="name" placeholder="за каждого гостя" required></div>
       <div class="field"><label>номер телефона</label><input type="tel" name="phone" placeholder="+7 ___ ___ __ __" required></div>
       <div class="field">
@@ -362,7 +362,7 @@ section{position:relative;width:100%}
         </div>
       </div>
       <button class="submit-btn" type="submit">отправить</button>
-      <div class="thanks">Спасибо!<br>буgем жgать вас</div>
+      <div class="thanks">Спасибо!<br>будем ждать вас</div>
     </form>
   </section>
 
